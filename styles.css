@@ -1,0 +1,392 @@
+/* Universal Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url("./img/scaled\ bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+}
+
+.grid {
+    display: grid;
+    grid-template: repeat(11, 50px) 409px repeat(4, 50px) 1fr repeat(4, 50px) repeat(4, 1fr) repeat(4, 50px) 600px repeat(10, 50px) 140px/ repeat(4, 25%);
+    width: 100%;
+    justify-content: center;
+    /*opacity: 0.9;*/
+}
+
+/* Colors */
+
+.blue {
+    color: hsl(206, 48%, 59%);
+}
+
+.white {
+    color: hsl(0, 0%, 100%);
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizfRExUiTo99u79B_mh0O6tLR8a8zI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.PT {
+    font-family: 'PT Sans';
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtXK-F2qC0s.woff) format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+.playfair {
+    font-family: 'Playfair Display';
+}
+
+/* Nav */
+
+.Logo {
+    grid-area: 1 / 1 / span 1 / span 4;
+    background-color: hsl(0, 0%, 100%);
+    /*display: flex;
+    align-items: center;*/
+    z-index: 2;
+    display: grid;
+    grid-template: 50px / 50px 1fr;
+    align-items: center;
+}
+
+.Logo img {
+    grid-area: 1 / 1 / span 1 / span 1;
+    width: 100%;
+}
+
+nav {
+    grid-area: 1 / 2 / span 1 / span 1;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-left: 50px;
+}
+
+#timetable {
+    grid-area: 28 / 1 / span 1 / span 1;
+}
+
+/* Anchor Section */
+
+a {
+    color: hsl(206, 48%, 59%);
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+        padding-bottom: 3px;
+}
+
+.anchor {
+    visibility: hidden;
+}
+
+
+/* Vision Landing Section */
+
+.VisionBackground {
+    grid-area: 12 / 1 / span 1 / span 4;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#BigLogo img {
+    width: 100%;
+}
+
+h1 { 
+    font-size: 2.5em;
+    color: hsl(0, 0%, 33%);
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    letter-spacing: 1em;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1092px) {
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 874px) {
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 655px) {
+    h1 {
+        font-size: 1em;
+    }
+}
+
+/* Mission Section */
+
+.MissionBackground {
+    grid-area: 17 / 1 / span 1 / span 4;
+    background-color: hsl(0, 0%, 100%);
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#M1,
+#M2 {
+    width: 500px;
+    padding: 40px;
+    font-size: 1.3em;
+    line-height: 1.5;
+    font-family: "Playfair Display";
+    color: hsl(0, 0%, 33%);
+}
+
+@media screen and (device-width: 360px)  {
+    #M1,
+    #M2 {
+        width: 80%;
+    }
+}
+
+/* Impressions Background */
+
+.ImpressionsBackground {
+    grid-area: 22 / 1 / span 4 / span 4;
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-areas: "lounge talking"
+                         "stud stable"
+                         "owner grooming"
+                         "lake largeHerd";
+    grid-gap: 20px;
+    place-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ImpressionsBackground img {
+    width: 433.09px;
+    height: 279.28px;
+}
+
+/* Tool Tip Section */
+
+.ImpressionsBackground img:hover {
+    cursor: context-menu; 
+}
+
+.tooltip {
+    position: relative;
+    display: inline;
+  }
+  
+  .tooltip .tooltiptext {
+    cursor: context-menu; 
+    font-family: "PT Sans";
+    font-size: 1.3em;
+    visibility: hidden;
+    width: 120px;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 33%);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    border-radius: 2px;
+    padding: 5px;
+  
+    /* Position the tooltip */
+
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tooltip .tooltiptext {
+    width: 300px;
+    bottom: 5%;
+    left: 42%;
+    margin-left: -60px; 
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /* Tool Tip End*/
+
+/* Tap Advice Section */
+
+.TapAdvice {
+    color:hsl(0, 0%, 73%);
+}
+
+@media only screen and (max-device-width: 770px) and (orientation: portrait) {
+    .TapAdvise {
+        display: inline;
+    }
+}
+
+@media only screen and (min-width: 771px) and (orientation: landscape) {
+    .TapAdvice {
+        display: none;
+    }
+}
+
+/* Images */
+
+img[src*='lounge'] {
+    grid-area: lounge;
+}
+
+img[src*='talking'] {
+    grid-area: talking;
+}
+
+img[src*='stud'] {
+    grid-area: stud;
+}
+
+img[src*="stable"] {
+    grid-area: stable;
+}
+
+img[src*="owner"] {
+    grid-area: owner;
+}
+
+img[src*="grooming"] {
+    grid-area: grooming;
+}
+
+img[src*="lake"] {
+    grid-area: lake;
+}
+
+img[src*="herd"] {
+    grid-area: largeHerd;
+}
+
+@media screen and (device-width: 770px), (orientation: portrait)  {
+    .ImpressionsBackground {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .ImpressionsBackground {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Courses Section */
+
+.CoursesBackground {
+    grid-area: 30 / 1 / span 1 / span 4;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+}
+
+/* Table */
+
+.table {
+    max-width: 545px;
+    height: 470px;
+    margin: 0 auto
+}
+
+table {
+    text-align: center;
+    margin: 0 auto;
+}
+
+th {
+    height: 50px;
+}
+
+tr {
+    border: 1px solid hsl(0, 0%, 100%);
+    background-color: hsl(206, 48%, 80%);
+}
+
+td {
+    padding: 15px;
+    background-color: hsl(206, 48%, 80%);
+}
+
+.left {
+    width: 150px;
+}
+
+.middle {
+    width: 300px;
+}
+
+.right {
+    width: 150px;
+}
+
+.left,
+.middle,
+.right {
+    height: 50px;
+}
+
+#courses {
+    letter-spacing: 0.7em;
+    padding-left: 19px;
+    color: hsl(206, 48%, 59%);
+}
+
+/* Footer Section */
+
+footer {
+    grid-area: 41 / 1 / span 1 / span 4;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 33%);
+}
+
+.copyright {
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: hsl(206, 48%, 59%);
+}
+
+.address {
+    text-align: center;
+    margin-top: 10px;
+}
